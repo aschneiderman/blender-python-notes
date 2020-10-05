@@ -2,6 +2,8 @@
 
 https://github.com/jeffheaton/present/tree/master/youtube/blender/intro
 
+https://github.com/curtisjamesholt/EasyBPY
+
 
 https://devtalk.blender.org/t/how-can-we-use-the-bpy-python-module-built-from-source-properly-in-visual-studio-code/11933
 
