@@ -1,0 +1,36 @@
+
+I got acess error when trying to start  blender.  
+Running VS Code sa admin did the trick
+
+If you get stuck, try stack exchange.  or post an issue at
+https://marketplace.visualstudio.com/items?itemName=JacquesLucke.blender-development
+
+https://github.com/JacquesLucke/blender_vscode/issues/17
+Im running into a issue with opening up an addon im upgrading.
+
+I had the same problem, try to remove your addon from blender before launching blender from vscode.
+
+-------
+
+I think I figured it out - at least partially.
+
+Under Windows, the addons for Blender are located under %appdata%\Blender Foundation\Blender<version number>\scripts\addons
+I noticed that if I create a new addon from within VStudio, the folder containing the scripts has a little “shortcut-folder” icon, instead of a regular “folder” icon. The addon I was having trouble with, however, had a “normal” icon. So, I deleted that folder, rebuild the addon from within Vstudio and now it’s working.
+
+It would be cool if someone has an explanation for this, because I’m drawing a blank. But otherwise it looks like this case is closed for me :slight_smile:
+
+
+
+
+Also:
+
+Running Visual Studio Code as Administrator should do the trick.
+
+If you're on Windows you can:
+
+Right click the shortcut or app/exe
+Go to properties
+Compatibility tab
+Check "Run this program as an administrator"
+There is a caveat to it though
+Make sure you have all other instances of VS Code closed and then try to run as Administrator. The electron framework likes to stall processes when closing them so it's best to check your task manager and kill the remaining processes.
